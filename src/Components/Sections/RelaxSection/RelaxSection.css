@@ -1,7 +1,8 @@
 .relax-section {
   width: 100%;
   background-size: 100%, cover;
-  background: #ecf0f0; }
+  background: #ecf0f0;
+  font-size: 30px; }
   .relax-section .relax-section__inner-container {
     display: flex;
     flex-direction: column;
@@ -10,7 +11,7 @@
     width: 100%;
     padding: 120px 0 0 0; }
   .relax-section .relax-section__title {
-    font-size: 2.5vw;
+    font-size: 1em;
     font-weight: 500;
     color: #092327;
     padding: 20px 0; }
@@ -28,7 +29,8 @@
     height: 200px;
     background: #2ebaa7; }
   .relax-section .relax-section__text {
-    font-size: 2.5vh;
+    font-family: 'Roboto';
+    font-size: 0.8em;
     padding-top: 20px;
     text-align: center; }
   .relax-section .relax-section__line {
@@ -36,3 +38,13 @@
     background: url("../../../images/line.png") 0 0 no-repeat;
     background-size: contain;
     padding: 50px 0; }
+
+@media screen and (max-width: 1300px) {
+  .relax-section {
+    font-size: 24px; }
+    .relax-section .relax-section__inner-container {
+      padding: 50px 0 0 0; }
+      .relax-section .relax-section__inner-container .relax-section__image {
+        width: 60%;
+        height: 200px;
+        background: #2ebaa7; } }

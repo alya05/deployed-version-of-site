@@ -11,7 +11,7 @@ class FeedbackSection extends Component {
       return (
           <section className="feedback-section">
             <div className="feedback-section__inner-container">
-                <h3 className="feedback-section__title">Отзывы наших первых пользователей</h3>
+                <h3 className="page__block-title">Отзывы наших первых пользователей</h3>
                 <div className="feedback-section__feedback-container">
                     <div className="feedback-section__feedback">
                         <div className="feedback-section__image-container">

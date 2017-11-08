@@ -23,7 +23,7 @@ class CleanersSection extends Component {
     return (
       <section className="cleaners-section">
         <div className="cleaners-section__inner-container">
-          <h3 className="cleaners-section__title">Наши клинерки</h3>
+          <h3 className="page__block-title">Наши клинерки</h3>
           <div className="cleaners-section__cleaner-container">
             <div onMouseOver={this.mouseOver.bind(this, 'cleaner1')}
                  onMouseOut={this.mouseOut.bind(this, 'cleaner1')}

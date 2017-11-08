@@ -15,7 +15,7 @@ class TrustSection extends Component {
     return (
       <section className="trust-section">
         <div className="trust-section__inner-container">
-          <h3 className="trust-section__title">На Звыш можно положиться</h3>
+          <h3 className="page__block-title">На Звыш можно положиться</h3>
           <div className="trust-section__argument-container">
               <div className="trust-section__argument trust-section__argument--safety">
                 <span className="trust-section__argument-title">БЕЗОПАСНОСТЬ</span>

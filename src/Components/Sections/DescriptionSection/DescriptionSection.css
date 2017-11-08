@@ -26,10 +26,14 @@
       content: none; }
 
 .description-section .description-section__title {
-  font-size: 2.5vw;
+  font-size: 1.2em;
   font-weight: 500;
   color: #092327;
   padding: 20px 0; }
+
+.description-section .description-section__image {
+  width: 100%;
+  height: 100%; }
 
 .description-section .description-section__option {
   display: flex;
@@ -37,14 +41,35 @@
   padding: 60px;
   background-color: #ecf0f0; }
 
+.description-section .description-section__main-image-container {
+  width: 40%;
+  align-self: flex-start; }
+
+.description-section .description-section__main-image-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 80%; }
+
 .description-section .description-section__main-image {
-  display: inline-block;
-  min-width: 400px;
-  height: 400px;
-  background: #2ebaa7; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  .description-section .description-section__main-image--room {
+    background: url("../../../images/room.jpg");
+    background-size: 100% 100%; }
+  .description-section .description-section__main-image--kitchen {
+    background: url("../../../images/kitchen.jpg");
+    background-size: 100% 100%; }
+  .description-section .description-section__main-image--hall {
+    background: url("../../../images/hall.jpg");
+    background-size: 100% 100%; }
 
 .description-section .description-section__item-container {
   display: flex;
+  flex-basis: 50%;
   flex-wrap: wrap;
   justify-content: center; }
 
@@ -54,7 +79,7 @@
   align-items: center;
   width: 250px; }
 
-.description-section .description-section__image {
+.description-section .description-section__image-container {
   min-width: 100px;
   height: 100px;
   background: #2ebaa7; }

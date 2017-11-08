@@ -7,7 +7,7 @@ class RelaxSection extends Component {
     return (
       <section className="relax-section">
         <div className="relax-section__inner-container">
-          <h3 className="relax-section__title">Отдыхайте! Чистоту дома мы возьмём на себя</h3>
+          <h3 className="page__block-title">Отдыхайте! Чистоту дома мы возьмём на себя</h3>
           <div className="relax-section__option-container">
             <div className="relax-section__option">
               <div className="relax-section__image">

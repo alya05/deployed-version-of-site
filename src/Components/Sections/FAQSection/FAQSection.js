@@ -29,7 +29,7 @@ class FAQSection extends Component {
     return (
       <section className="faq-section">
         <div className="faq-section__inner-container">
-          <h3 className="faq-section__title">Вопросы и ответы</h3>
+          <h3 className="page__block-title">Вопросы и ответы</h3>
           <Tabbordion  blockElements={blockElements}
                       className="accordion"
                       animateContent="height"

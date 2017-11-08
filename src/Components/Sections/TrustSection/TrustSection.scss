@@ -1,6 +1,7 @@
 .trust-section{
   background-color: #ffffff;
   width: 100%;
+  font-size: 30px;
 }
 
 .trust-section__inner-container{
@@ -11,9 +12,9 @@
   align-items: center;
 }
 .trust-section__title{
-  margin-top: 4.9vw;
+  padding: 20px 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 2.5vw;
+  font-size: 1.2em;
   font-weight: 500;
   color: #092327;
 }
@@ -56,7 +57,7 @@
   font-weight: 400;
   letter-spacing: 0.03vw;
   color: #ffffff;
-  font-size: 1.5vw;
+  font-size: 0.8em;
   border: 0.11em solid #ffffff;
   padding: 0.1em 1em;
 }
@@ -74,7 +75,7 @@
   font-weight: 400;
   letter-spacing: 0.03vw;
   color: #ffffff;
-  font-size: 1.5vw;
+  font-size: 0.7em;
   border: 0.11em solid #ffffff;
   padding: 0.1em 1em;
 }
@@ -110,8 +111,34 @@
 .trust-section__content-text{
   display: block;
   width: 70%;
-  font-size: 1.1vw;
+  font-size: 0.6em;
   padding: 30px;
   text-align: center;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1300px) {
+  .trust-section {
+    font-size: 24px;
+    .trust-section__inner-container {
+      padding: 50px 0 0 0;
+
+      .trust-section__image {
+        width: 60%;
+        height: 200px;
+        background: #2ebaa7;
+      }
+    }
+
+    .trust-section__content-text{
+      width: 80%;
+      padding: 15px;
+    }
+
+    .trust-section__argument-container{
+      margin: 50px 0 70px 0;
+    }
+  }
+
+
 }

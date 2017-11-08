@@ -77,3 +77,6 @@ input:disabled {
 
 ::-moz-placeholder {
   color: #aaa; }
+
+.page__block-title {
+  font-size: 1em; }
