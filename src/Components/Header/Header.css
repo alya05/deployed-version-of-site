@@ -1,0 +1,92 @@
+.header {
+  width: 100%;
+  height: 10rem;
+  color: white;
+  font-size: 24px;
+  display: flex; }
+  .header .header__inner-container {
+    display: flex;
+    max-width: 1960px;
+    width: 100%;
+    height: 85%;
+    padding: 20px; }
+  .header .header__nav {
+    display: none; }
+  .header .header__container {
+    display: flex;
+    flex-grow: 2;
+    justify-content: space-between;
+    margin-top: 10px; }
+
+.header__calculator * {
+  color: #092327; }
+
+.header__calculator .phone-number__text, .header__calculator .phone-number__icon, .header__calculator .fa-phone {
+  color: #164347; }
+
+@media screen and (max-width: 1450px) {
+  font-size: 16px; }
+
+@media screen and (max-device-width: 700px) {
+  .header {
+    font-size: 17px;
+    justify-content: inherit;
+    height: auto; }
+    .header .header__inner-container {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding: 10px; }
+    .header .header__container {
+      flex-direction: column;
+      flex-grow: 0;
+      justify-content: center;
+      height: max-content; }
+    .header .header__nav {
+      display: block;
+      z-index: 102;
+      left: 20px; }
+      .header .header__nav #nav-toggle {
+        position: relative;
+        display: inline-block;
+        background: #2ebaa7; }
+      .header .header__nav #nav-toggle span {
+        position: absolute;
+        left: 0;
+        top: 10px; }
+      .header .header__nav #nav-toggle span,
+      .header .header__nav #nav-toggle span:before,
+      .header .header__nav #nav-toggle span:after {
+        left: 0;
+        cursor: pointer;
+        border-radius: 1px;
+        height: 3px;
+        width: 30px;
+        z-index: 100;
+        background: white;
+        position: absolute;
+        display: block;
+        content: ''; }
+      .header .header__nav #nav-toggle span:before {
+        left: 0;
+        top: -10px; }
+      .header .header__nav #nav-toggle span:after {
+        left: 0;
+        bottom: -10px; }
+      .header .header__nav #nav-toggle span, .header .header__nav #nav-toggle span:before, .header .header__nav #nav-toggle span:after {
+        background: #2ebaa7;
+        transition: all 0.5s ease-in,  all 0.4s ease-out; }
+      .header .header__nav #nav-toggle.active span {
+        background-color: transparent;
+        color: white;
+        left: 100px; }
+      .header .header__nav #nav-toggle.active span:before, .header .header__nav #nav-toggle.active span:after {
+        top: 0;
+        background: white;
+        height: 2px;
+        width: 25px; }
+      .header .header__nav #nav-toggle.active span:before {
+        transform: rotate(45deg);
+        background: white; }
+      .header .header__nav #nav-toggle.active span:after {
+        transform: rotate(-45deg);
+        background: white; } }

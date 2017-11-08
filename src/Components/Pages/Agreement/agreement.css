@@ -1,0 +1,48 @@
+@charset "UTF-8";
+.terms__header-background {
+  background-image: url("../../../images/main-page-backgound.png"); }
+
+.terms {
+  font-size: 16px; }
+  .terms .terms__inner-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto; }
+  .terms .terms__title {
+    font-family: 'Roboto';
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    max-width: 700px;
+    margin: auto; }
+  .terms .terms__paragraph {
+    padding: 10px;
+    margin: auto; }
+  .terms .terms__list {
+    margin: auto;
+    max-width: 700px; }
+  .terms .terms__list-section {
+    color: #2ebaa7; }
+  .terms .terms__list-point {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    color: #2e3e40; }
+  .terms ol {
+    /* убираем стандартную нумерацию */
+    list-style: none;
+    /* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
+    counter-reset: li; }
+  .terms li:before {
+    /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+    counter-increment: li;
+    /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+    content: counters(li, ".") ". "; }
+
+@media screen and (max-device-width: 700px) {
+  .terms .terms__inner-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 40px; } }

@@ -1,0 +1,34 @@
+{
+  "name": "zvysh-main-sait",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "node-sass-chokidar": "0.0.3",
+    "react": "^15.6.1",
+    "react-datepicker": "^0.54.0",
+    "react-dom": "^15.6.1",
+    "react-input-mask": "^1.0.7",
+    "react-onscroll": "^1.0.4",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.13",
+    "react-select": "^1.0.0-rc.10",
+    "react-spinners": "^0.1.9",
+    "react-tabbordion": "^1.0.2",
+    "react-tabs": "^2.0.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.1"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "author": "Anton Borovoi",
+  "license": "ISC"
+}

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.main-section {
+  width: 100%;
+  height: 38.5vw;
+  background-image: url("../../../images/main-page-backgound-min.png");
+  background-size: 100%, cover; }
+  .main-section .main-seсtion__inner-container {
+    width: 100%;
+    height: 100%;
+    position: relative; }
