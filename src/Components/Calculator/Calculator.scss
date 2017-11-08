@@ -399,6 +399,11 @@ $hover-color: #31cdba;
       position: fixed;
     }
 
+    &--footer {
+      top: 0;
+      bottom: 600px;
+    }
+
     flex-shrink: 1;
     margin: 50px 30px 10px;
 
@@ -988,6 +993,8 @@ img { pointer-events: none; }
   .calculator__order-info--fixed {
     position: static;
   }
+
+
 
 }
 @media screen and (max-device-width: 700px) {

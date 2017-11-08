@@ -294,6 +294,9 @@
     .calculator__order-info--fixed {
       top: 20px;
       position: fixed; }
+    .calculator__order-info--footer {
+      top: 0;
+      bottom: 600px; }
     .calculator__order-info__inner-container {
       flex-direction: column;
       align-items: center;

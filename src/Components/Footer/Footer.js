@@ -3,6 +3,9 @@ import './footer.css';
 import logo from '../../images/main-logo-calculator.png';
 import Logo from '../../Components/Logo/Logo';
 
+import { NavLink } from 'react-router-dom'
+
+
 class Footer extends Component {
 
   constructor(props) {
@@ -21,7 +24,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer className="footer">
+      <footer id="footer" className="footer">
         <div className="footer__inner-container">
           <div className="footer__copyright">
             <div className="footer__copyright-container">
@@ -36,8 +39,8 @@ class Footer extends Component {
             <p className="footer__requisites-text">feedback@zvysh.by</p>
         </div>
         <div className="footer__agreements-container">
-          <a className="footer__agreement" href="#" target="_blank">Публичный договор оферты</a>
-          <a className="footer__agreement" href="#" target="_blank">Договор на оказание услуг</a>
+          <NavLink className="footer__agreement" to={'/terms'}>Публичное соглашение</NavLink>
+          <NavLink className="footer__agreement" to={'/agreement'}>Договор на оказание услуг</NavLink>
         </div>
         <div className="footer__social-container">
           <a className="link" target="_blank" href="https://vk.com/zvysh">

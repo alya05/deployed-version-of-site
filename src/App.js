@@ -14,6 +14,7 @@ class App extends Component {
 
       if (orderInfo) {
         const headerCalculator = document.getElementById('calculator-header');
+        const footer = document.getElementById('footer');
         const orderInfoContainer = document.getElementById('orderInfoContainer');
         if (window.pageYOffset > headerCalculator.offsetHeight + 40) {
           orderInfo.classList.add('calculator__order-info--fixed');
@@ -21,6 +22,19 @@ class App extends Component {
 
         } else {
           orderInfo.classList.remove('calculator__order-info--fixed');
+        }
+
+        var body = document.body,
+          html = document.documentElement;
+
+        var height = Math.max( body.scrollHeight, body.offsetHeight,
+          html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+        if (window.pageYOffset > height - footer.offsetHeight-600) {
+          console.log(1);
+          orderInfo.style.top = (height - window.pageYOffset - footer.offsetHeight-600) + 'px';
+        } else {
+          orderInfo.style.top = 20 + 'px';
         }
       }
   };
