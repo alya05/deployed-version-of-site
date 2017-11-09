@@ -1,0 +1,71 @@
+.questions__header-background {
+  background-image: url("../../../images/main-page-backgound.png"); }
+
+.questions {
+  font-size: 16px; }
+  .questions .questions__inner-container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 10vh; }
+  .questions .questions__navigation {
+    width: 40%;
+    min-height: 48vh; }
+  .questions .questions__navigation__inner-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+    justify-content: center; }
+  .questions .questions__navigation__element {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #2ebaa7;
+    width: 100%; }
+    .questions .questions__navigation__element--active {
+      background: #2ebaa7;
+      color: white; }
+  .questions .question__list-title {
+    font-size: 1em;
+    margin-top: 10px;
+    font-weight: bold; }
+  .questions .question__list {
+    list-style-type: none; }
+  .questions .question__list-element {
+    margin-left: 20px; }
+  .questions .question__text {
+    font-size: 0.9em; }
+  .questions .questions__block__inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .questions .accordion-animator--checked {
+    max-height: 10000px;
+    height: auto !important; }
+  .questions .accordion-panel {
+    border-top: none; }
+  .questions .accordion-title--content:before {
+    left: -8px;
+    right: auto;
+    top: 20px; }
+  .questions .accordion-panel:last-child {
+    border: none; }
+
+@media screen and (max-device-width: 800px) {
+  .questions {
+    font-size: 16px; }
+    .questions .questions__inner-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .questions .questions__navigation__inner-container {
+      flex-direction: row;
+      flex-wrap: wrap; }
+    .questions .questions__navigation {
+      width: 90%;
+      min-height: 0; } }

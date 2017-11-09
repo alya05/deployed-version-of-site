@@ -2,6 +2,7 @@ import React, { Component}  from 'react';
 import Flat from './Components/Pages/Flat/Flat';
 import Agreement from './Components/Pages/Agreement/agreement';
 import Terms from './Components/Pages/Terms/terms';
+import Questions from './Components/Pages/Questions/questions';
 import Calculator from './Components/Calculator/Calculator';
 import { Switch, Route } from 'react-router-dom'
 
@@ -27,6 +28,7 @@ class Routes extends Component {
         <Route exact path='/order/:type' component={() => <Calculator defaultValues={defaultValues}/>}/>
         <Route exact path='/agreement' component={Agreement}/>
         <Route exact path='/terms' component={Terms}/>
+        <Route exact path='/questions' component={Questions}/>
       </Switch>
     )
   }

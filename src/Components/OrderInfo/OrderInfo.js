@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Tabbordion, TabPanel, TabLabel, TabContent } from 'react-tabbordion'
 import ReactDOM from 'react-dom';
+import { NavLink } from 'react-router-dom'
+
 
 const blockElements = {
   animator: "accordion-animator",
@@ -21,6 +23,7 @@ const bemModifiers = {
   noContent: "no-content",
   unchecked: "unchecked"
 };
+
 
 class OrderInfo extends Component {
   constructor(){
@@ -136,7 +139,7 @@ class OrderInfo extends Component {
             <div onClick={this.props.createOrder} className="calculator__order-info-button-submit">Заказать уборку</div>
             <div className="calculator__order-info-agreement">
             <span>Нажимая кнопку, Вы принимаете условия
-              <span><a  className="calculator__agreement-link" href=""> пользовательского соглашения</a></span>
+              <span><NavLink className="calculator__agreement-link" to={'/terms'}> пользовательского соглашения</NavLink></span>
             </span>
             </div>
           </div>
