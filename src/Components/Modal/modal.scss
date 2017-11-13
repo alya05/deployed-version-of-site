@@ -1,0 +1,159 @@
+.modal {
+  height: 100%;
+  width: 98vw;
+  z-index: 1001;
+  background: transparent;
+  font-size: 20px;
+  position: absolute;
+  color: #092327;
+
+  .modal__close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+  }
+
+  .modal__close-button-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal__inner-container {
+    width: 85%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    align-items: center;
+    border: 1px solid #2ebaa7;
+    padding: 30px;
+    position: relative;
+  }
+
+  .modal__title {
+    font-family: "Roboto";
+    font-size: 1.3em;
+    padding: 10px;
+    color: #092327;
+  }
+
+  .modal__lists-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0;
+  }
+
+  .modal_options-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .modal__list-container {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    flex-basis: 40%;
+  }
+
+  .modal__option-container {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    flex-basis: 40%;
+    margin: 10px;
+  }
+
+  .modal__option {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .modal__option-image-container {
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 80px;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal__option-image {
+
+  }
+
+  .modal__option__title {
+    font-family: "Roboto Thin";
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 1em;
+  }
+
+  .modal__option__description-container {
+    display: flex;
+    padding: 0 10px 10px 10px;
+    flex-direction: column;
+  }
+
+
+  .modal__list__title {
+    font-family: "Roboto Thin";
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.1em;
+  }
+
+  .modal__list-element {
+    color: #2ebaa7;
+    margin: 10px;
+  }
+
+  .modal__text {
+    font-family: 'Roboto';
+    color: #092327;
+    font-size: 0.8em
+  }
+
+  .modal__order-button-container {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #2ebaa7;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .modal__order__button {
+    font-family: "Roboto Thin";
+    color: white;
+    display: flex;
+    font-weight: bold;
+    flex-basis: 30%;
+    background: #2ebaa7;
+    padding: 10px 30px;
+    cursor: pointer;
+  }
+}
+
+
+@media screen and (max-device-width: 600px){
+  .modal {
+    .modal_options-container {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .modal__lists-container {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

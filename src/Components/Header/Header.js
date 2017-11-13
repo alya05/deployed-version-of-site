@@ -4,6 +4,7 @@ import Logo from '../Logo/Logo';
 import ZvyshDescription from '../../Components/ZvyshDescription/ZvyshDescription';
 import Navigation from '../../Components/Navigation/Navigation';
 import PhoneNumber from '../../Components/PhoneNumber/PhoneNumber';
+import SignIn from '../../Components/SignIn/SignIn.js';
 
 
 class Header extends Component {
@@ -24,13 +25,14 @@ class Header extends Component {
 
   render() {
     return (
-      <header className={'header ' + this.props.specClass}>
+      <header id='header'className={'header ' + this.props.specClass}>
         <div className="header__inner-container">
           <Logo logo={this.props.logo} specClass={'header__page'}/>
           <div className="header__container">
             <ZvyshDescription/>
             <Navigation isMenuActive={this.state.isMenuActive}/>
             <PhoneNumber/>
+            <SignIn/>
           </div>
           <div className="header__nav">
             <p onClick={this.changeMenuStatus} className={this.state.isMenuActive ? 'active' : '' } id="nav-toggle"><span></span></p>

@@ -1,16 +1,47 @@
 .sign-in{
-  flex-grow: 20;
+  display: flex;
 
   .sign-in__inner-container{
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
   }
   .sign-in__text{
-    color: #2ebaa7;
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-family: 'Roboto Light', sans-serif;
     font-weight: 300;
+    margin-left: 0.5rem;
   }
 }
+
+@media screen and (max-width: 1450px) {
+  .sign-in {
+    font-size: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .sign-in {
+    flex-basis: 30%;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .sign-in {
+    font-size: 16px;
+    width: 225px;
+  }
+}
+
+@media screen and (max-device-width: 700px) {
+  .sign-in {
+    display: none;
+  }
+
+
+}
+

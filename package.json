@@ -13,6 +13,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.13",
     "react-select": "^1.0.0-rc.10",
+    "react-slick": "^0.15.4",
     "react-spinners": "^0.1.9",
     "react-tabbordion": "^1.0.2",
     "react-tabs": "^2.0.0"

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './FAQSection.css';
 import { Tabbordion , TabPanel, TabLabel, TabContent } from 'react-tabbordion'
+import { NavLink } from 'react-router-dom'
+
 
 const blockElements = {
   animator: "accordion-animator",
@@ -100,6 +102,9 @@ class FAQSection extends Component {
               </TabContent>
             </TabPanel>
           </Tabbordion>
+          <NavLink className="faq-section__button" to={'/questions'}>
+            <div className="faq-section__button-text">Полный список</div>
+          </NavLink>
         </div>
       </section>
     );

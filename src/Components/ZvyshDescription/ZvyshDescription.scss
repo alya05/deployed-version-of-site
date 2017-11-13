@@ -3,7 +3,7 @@
 
   .zvysh-description__inner-container{
     height: 100%;
-    margin-left: 1em;
+    margin-left: 2.3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,16 +11,16 @@
   .zvysh-description__location{
     display: flex;
     font-family: 'Roboto Light', sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .zvysh-description__text{
-    font-size: 1em;
+    font-size: 0.9em;
     font-family: 'Roboto Light', sans-serif;
 
   }
 
   .zvysh-description__location-icon{
-    font-size: 1.1em;
+    font-size: 0.9em;
   }
   .zvysh-description__text_bottom{
     margin-left: 0.6em;
@@ -30,7 +30,7 @@
 @media screen and (max-width: 1450px) {
   .zvysh-description {
     .zvysh-description__inner-container {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 }
@@ -38,12 +38,12 @@
 @media screen and (max-width: 1030px) {
   .zvysh-description {
     .zvysh-description__inner-container {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-device-width: 700px) {
   .zvysh-description {
     height: max-content;
     .zvysh-description__inner-container {

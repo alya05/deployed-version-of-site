@@ -5,20 +5,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding-bottom: 100px; }
-  .faq-section .faq-section__title {
-    margin-top: 4.9vw;
-    font-size: 2.5vw;
-    font-weight: 500;
+    width: 100%; }
+  .faq-section .faq-section__button {
+    padding: 7px 40px;
+    border-radius: 2px;
+    border: 1px solid #092327;
+    align-self: flex-end;
+    margin: 30px 140px 20px 0; }
+  .faq-section .faq-section__button-text {
+    font-family: 'Roboto';
     color: #092327;
-    padding: 20px 0; }
+    font-weight: bold;
+    font-size: 16px; }
+  .faq-section .accordion p {
+    padding: 10px; }
 
 .accordion {
   list-style: none;
   width: 80%;
   margin: 0;
   padding: 0; }
+  .accordion p {
+    font-size: 15px; }
+
+@media screen and (max-device-width: 750px) {
+  .faq-section .faq-section__inner-container {
+    padding: 20px 0; }
+  .faq-section .faq-section__button {
+    margin: 20px auto; }
+  .accordion .accordion-title {
+    font-size: 14px;
+    font-family: 'Roboto'; }
+  .accordion .accordion-title--content:before {
+    left: -9px;
+    top: 22%; }
+  .accordion .accordion-title--content:before {
+    left: -9px;
+    top: 22%;
+    right: auto; } }
 
 .accordion-panel {
   display: block;
@@ -37,11 +61,11 @@
 
 .accordion-title {
   color: #2ebaa7;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   display: block;
   font-weight: bold;
-  padding: 1rem;
+  padding: 10px;
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -67,7 +91,7 @@
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
   right: 1rem;
-  top: 37%;
+  top: 26%;
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: -webkit-transform 375ms ease-in-out;
@@ -109,7 +133,7 @@
   transition: opacity 375ms ease-in-out, transform 375ms ease-in-out; }
 
 .accordion-content--marginTop {
-  margin-top: -65535px;
+  margin-top: auto;
   transform: translateY(-50%);
   -webkit-transition: margin-top 375ms ease-in-out, opacity 375ms ease-in-out, transform 375ms ease-in-out;
   transition: margin-top 375ms ease-in-out, opacity 375ms ease-in-out, transform 375ms ease-in-out; }
@@ -131,3 +155,7 @@
   position: fixed;
   width: 1px;
   z-index: -1; }
+
+@media screen and (max-device-width: 450px) {
+  .accordion .accordion-animator--checked {
+    min-height: 250px !important; } }

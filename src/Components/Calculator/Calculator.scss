@@ -28,7 +28,7 @@ $hover-color: #31cdba;
     display: flex;
     padding: 10px 0 33px 0;
     flex-direction: column;
-    width: 87%;
+    width: 65%;
   }
 
   &__order-info-container--total {
@@ -128,7 +128,7 @@ $hover-color: #31cdba;
   &__header {
     font-family: 'Roboto THIN';
     font-size: 1.6em;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     color: #092327;
     font-weight: bold;
   }
@@ -186,8 +186,8 @@ $hover-color: #31cdba;
     list-style: disc outside;
     color: #2ebaa7;
     font-size: 22px;
-    width: 86%;
-    margin: auto;
+    width: 100%;
+    margin: 10px auto;
     //-webkit-padding-start: 25px;
   }
 
@@ -357,6 +357,14 @@ $hover-color: #31cdba;
     font-weight: bold;
     width: 100%;
     font-size: 1em;
+  }
+
+  &__input--visible {
+    width: 100%;
+    font-size: 20px;
+    margin: 10px 0 20px;
+    box-sizing: border-box;
+    border: 1px solid #d1d1d2;
   }
 
   &__input--date {
@@ -638,23 +646,25 @@ img { pointer-events: none; }
   border: none;
   font-size: 0.8em;
   font-weight: 600;
-  color: black;
   cursor: pointer;
 }
 
-
+.Select-option {
+  font-size: 0.8em;
+}
 
 .calculator__top-header {
-  background-color: #ecf0f0;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 48px;
+    border-bottom: 2px solid #d1d1d2;
 }
 
 .calculator__top-title {
   font-family: "Roboto Thin";
   font-weight: bold;
+  letter-spacing: 3px;
   color: #092327;
   padding-bottom: 20px;
   font-size: 1em;
@@ -828,6 +838,7 @@ img { pointer-events: none; }
     .calculator__address-container {
       width: 35%;
       margin: 0 40px 0 0;
+      min-width: 243px !important;
     }
 
     .calculator__userInfo {
@@ -840,6 +851,7 @@ img { pointer-events: none; }
     .calculator__userInfo-container {
       width: 35%;
       margin: 0 40px 0 0;
+      min-width: 243px !important;
     }
 
     .calculator__textArea {
@@ -1262,14 +1274,14 @@ img { pointer-events: none; }
 
 .calculator__parameter {
   min-width: 243px !important;
-  margin: 10px !important;
+  margin-right: 10px;
 }
 
 
 .calculator {
   .calculator__button {
     min-width: 243px !important;
-    margin: 10px !important;
+    margin-right: 3em;
   }
 }
 

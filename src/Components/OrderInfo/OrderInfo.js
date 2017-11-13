@@ -32,6 +32,15 @@ class OrderInfo extends Component {
 
 
   renderOrderHeader = () => {
+
+    const text = this.props.isSupportive ?
+      'Поддерживающая'
+      :
+      'Комплексная';
+
+    if (this.props.isCottage) {
+      return text + ' уборка коттеджа площадью ' + this.props.metersCount + ' кв. м'
+    }
     let rooms = '';
     let baths = '';
     let roomCount = this.props.roomCount;
@@ -77,7 +86,6 @@ class OrderInfo extends Component {
   };
 
   renderPromoCodeBlock = () => {
-    console.log(this.props);
     if (!this.props.sale) {
       return (
         <div className="calculator__order-info-container calculator__order-info-container--promo">

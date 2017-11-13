@@ -7,9 +7,9 @@ class BottomCalculator extends Component {
     return (
         <section className="bottom-calculator-section">
           <div className="bottom-calculator-section__inner-container">
-              <NavLink to={'order'} className="bottom-calculator-section__text">
+              <NavLink to={this.props.url} className="bottom-calculator-section__text">
               <div >
-                 Уборка квартиры от {this.props.price} рублей
+                {this.props.label}
              </div>
               </NavLink>
           </div>

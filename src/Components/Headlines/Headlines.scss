@@ -7,19 +7,32 @@
     align-items: center;
   }
   .headlines__main-headline{
-    margin-top: 4.875vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Light', sans-serif;
     font-size: 3.75vw;
-    font-weight: 500;
+    font-weight: 100;
     letter-spacing: 0.32vw;
     color: #ffffff;
   }
   .headlines__second-headline{
     margin-top: 0.5vw;
     font-size: 2.344vw ;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Thin', sans-serif;
     font-weight: 100;
     letter-spacing:  0.15vw;
     color: #ffffff;
+  }
+}
+
+@media screen and (max-device-width: 750px) {
+  .headlines {
+
+    margin: 20px auto;
+    .headlines__main-headline {
+      font-size: 17px;
+    }
+
+    .headlines__second-headline{
+      font-size: 15px ;
+    }
   }
 }

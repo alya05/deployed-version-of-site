@@ -7,7 +7,7 @@ class App extends Component {
 
   handleScroll = (e) => {
 
-      if (document.documentElement.clientWidth < 10) {
+      if (document.documentElement.clientWidth < 750) {
         return;
       }
       const orderInfo = document.getElementById('orderInfo');
@@ -31,11 +31,15 @@ class App extends Component {
           html.clientHeight, html.scrollHeight, html.offsetHeight );
 
         if (window.pageYOffset > height - footer.offsetHeight-600) {
-          console.log(1);
           orderInfo.style.top = (height - window.pageYOffset - footer.offsetHeight-600) + 'px';
         } else {
           orderInfo.style.top = 20 + 'px';
         }
+      } else {
+        // let header = document.getElementById('header');
+        // header.style.position = 'fixed';
+        // header.style.background = 'white';
+
       }
   };
 

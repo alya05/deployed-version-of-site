@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './questions.css';
 import {CircleLoader} from 'react-spinners';
-import logo from '../../../images/main_logo_colorfull.png';
+import logo from '../../../images/main-logo-calculator.png';
+
 import { Tabbordion , TabPanel, TabLabel, TabContent } from 'react-tabbordion'
 
 import Footer from '../../../Components/Footer/Footer';
@@ -404,7 +405,7 @@ class Questions extends Component {
         </div>
         <div className={this.state.visible ? 'container--visible': 'container'}>
           <div className="agreement__header">
-            <Header logo={logo} specClass="questions-background"/>
+            <Header logo={logo} specClass="header__calculator"/>
           </div>
          <div className="questions__inner-container">
            <div className="questions__navigation">

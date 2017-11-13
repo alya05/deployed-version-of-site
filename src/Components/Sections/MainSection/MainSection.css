@@ -2,9 +2,15 @@
 .main-section {
   width: 100%;
   height: 38.5vw;
-  background-image: url("../../../images/main-page-backgound-min.png");
-  background-size: 100%, cover; }
+  background: url("../../../images/main-page-backgound-min.png") no-repeat;
+  background-size: 100% 100%; }
   .main-section .main-seсtion__inner-container {
     width: 100%;
     height: 100%;
     position: relative; }
+
+@media screen and (max-device-width: 750px) {
+  .main-section {
+    width: 100%;
+    height: 150.5vw;
+    background-size: 143% 93%; } }

@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './ProcessingSection.css';
+
+import like from '../../../images/like.png';
+import list from '../../../images/list2.png';
+import time from '../../../images/time.png';
 
 const parameters = [
   {
@@ -19,73 +26,70 @@ const parameters = [
   }
 ];
 
+var settings = {
+  dots: true,
+  speed: 500,
+  infinite: false,
+  arrows: true,
+  slidesToShow: 1,
+  useCSS: true,
+  className: 'site-slider',
+
+};
+
 class ProcessingSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      parameterIndex: 1
-    }
-  }
-  renderParameter = () => {
-   return (
-     <div className="processing-section__parameter">
-       <div className="processing-section__image">
-
-       </div>
-      </div>
-   )
-  };
-
-  renderDescription = () => {
-    return (
-      <div className="processing-section__description">
-        <span className="processing-section__text-title">{parameters[this.state.parameterIndex].title}</span>
-        <span className="processing-section__text">{parameters[this.state.parameterIndex].text}</span>
-      </div>
-    );
-  };
-
-  moveUp =() => {
-    if (this.state.parameterIndex === parameters.length-1) {
-     return;
-    } else {
-      this.setState({
-        parameterIndex: ++this.state.parameterIndex
-      })
-    }
-  };
-
-  moveDown =() => {
-    if (this.state.parameterIndex === 0) {
-     return;
-    } else {
-      this.setState({
-        parameterIndex: --this.state.parameterIndex
-      })
-    }
-  };
   render() {
     return (
       <section className="processing-section">
         <div className="processing-section__inner-container">
-          <h3 className="processing-section__title">Как мы работаем</h3>
-          <div className="processing-section__parameter-container">
-            <i onClick={this.moveDown}
-               className="processing-section__navigation-icon  fa fa-angle-left"/>
-            {this.renderParameter()}
-            <i onClick={this.moveUp}
-               className="processing-section__navigation-icon  fa fa-angle-right"/>
-				  </div>
-          {this.renderDescription()}
-          <div className="processing-section__navigation">
-            {
-              parameters.map((item, index) => (
-                <div className={this.state.parameterIndex === index ? "processing-section__circle processing-section__circle--active" : "processing-section__circle"}>
-                  <i className={"fa fa-circle inner-circle"} aria-hidden="true"/>
+          <h3 className="page__block-title">Как мы работаем</h3>
+          <Slider {...settings}>
+            <div className="processing-section__container">
+              <div className="processing-section__parameter-container slick-slide">
+              <div className="processing-section__parameter">
+                <div className="processing-section__image-container">
+                  <img src={list} alt="" className="processing-section__image"/>
                 </div>
-              ))
-            }
-          </div>
+                <div className="processing-section__text-title">
+                  Оставьте заявку
+                </div>
+                <div className="processing-section__description">
+                  Укажите параметры уборки и выберите доступную дату
+                </div>
+              </div>
+            </div>
+            </div>
+            <div className="processing-section__container">
+              <div className="processing-section__parameter-container slick-slide">
+                <div className="processing-section__parameter">
+                  <div className="processing-section__image-container">
+                    <img src={time} alt="" className="processing-section__image"/>
+                  </div>
+                  <div className="processing-section__text-title">
+                    Дождитесь домработницу Звыш
+                  </div>
+                  <div className="processing-section__description">
+                    Она приедет в удобное для Вас время и привезёт с собой всё необходимое
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="processing-section__container">
+              <div className="processing-section__parameter-container slick-slide">
+                <div className="processing-section__parameter">
+                  <div className="processing-section__image-container">
+                    <img src={like} alt="" className="processing-section__image"/>
+                  </div>
+                  <div className="processing-section__text-title">
+                    Платите за результат
+                  </div>
+                  <div className="processing-section__description">
+                    Оплатите уборку наличными и наслаждайтесь чистотой в Вашем доме
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Slider>
         </div>
 		  </section>
     );

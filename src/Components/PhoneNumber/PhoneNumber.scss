@@ -1,5 +1,6 @@
 .phone-number{
   display: flex;
+  padding: 0 10px ;
 
   .phone-number__inner-container{
     width: 100%;
@@ -9,10 +10,10 @@
     align-items: center;
   }
   .phone-number__icon{
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .phone-number__text{
-    font-size: 1em;
+    font-size: 0.9em;
     font-family: 'Roboto Light', sans-serif;
     font-weight: 300;
     margin-left: 0.5rem;
@@ -21,7 +22,6 @@
 
 @media screen and (max-width: 1450px) {
   .phone-number {
-    flex-basis: 25%;
     font-size: 20px;
   }
 }

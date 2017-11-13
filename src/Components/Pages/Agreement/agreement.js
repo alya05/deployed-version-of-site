@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './agreement.css';
 import {CircleLoader} from 'react-spinners';
-import logo from '../../../images/main_logo_colorfull.png';
+import logo from '../../../images/main-logo-calculator.png';
 
 import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
@@ -38,7 +38,7 @@ class Agreement extends Component {
         </div>
         <div className={this.state.visible ? 'container--visible': 'container'}>
           <div className="agreement__header">
-            <Header logo={logo} specClass="agreement__header-background"/>
+            <Header logo={logo} specClass="header__calculator"/>
           </div>
           <div className="agreement__inner-container">
             <div className="agreement__title">

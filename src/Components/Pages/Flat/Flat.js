@@ -4,13 +4,12 @@ import MainSection from '../../../Components/Sections/MainSection/MainSection';
 import RelaxSection from '../../../Components/Sections/RelaxSection/RelaxSection';
 import TrustSection from '../../../Components/Sections/TrustSection/TrustSection';
 import DescriptionSection from '../../../Components/Sections/DescriptionSection/DescriptionSection';
-import CleanersSection from '../../../Components/Sections/CleanersSection/CleanersSection';
 import FAQSection from '../../../Components/Sections/FAQSection/FAQSection';
-import FeedbackSection from '../../../Components/Sections/FeedbackSection/FeedbackSection';
 import ProcessingSection from '../../../Components/Sections/ProcessingSection/ProcessingSection';
 import BottomCalculator from '../../../Components/Sections/Bottom-Calculator/Bottom-Calculator';
 import logo from '../../../images/main_logo_colorfull.png';
 import {CircleLoader} from 'react-spinners';
+import Modal from '../../Modal/modal';
 
 import * as PRICES from '../../../constants/price';
 import Footer from '../../../Components/Footer/Footer';
@@ -22,7 +21,8 @@ class Flat extends Component {
       bathroomCount: 1,
       roomCount: 1,
       price: PRICES.BASE_PRICE,
-      visible: false
+      visible: false,
+      isModal: false
     }
   }
 
@@ -71,6 +71,18 @@ class Flat extends Component {
     });
   };
 
+  closeModal =() => {
+    this.setState({
+      isModal: false
+    })
+  };
+
+  openModal =() => {
+    this.setState({
+      isModal: true
+    })
+  };
+
   removeBathRoom = () => {
     if (this.state.bathroomCount === 1) {
       return;
@@ -91,7 +103,10 @@ class Flat extends Component {
   };
 
   render() {
-
+    const renderModal = this.state.isModal ?
+      <Modal closeModal={this.closeModal}/>
+      :
+      null;
     const price = this.countPrice();
     return (
       <div className="flat">
@@ -105,16 +120,16 @@ class Flat extends Component {
                        logo={logo}
                        removeBathRoom={this.removeBathRoom}
                        roomCount={this.state.roomCount}
+                       type="flat"
                        bathroomCount={this.state.bathroomCount}
                        price={price}/>
+          {renderModal}
           <RelaxSection/>
           <TrustSection/>
-          <DescriptionSection/>
-          <CleanersSection/>
+          <DescriptionSection openModal={this.openModal}/>
           <FAQSection/>
           <ProcessingSection/>
-          <FeedbackSection/>
-          <BottomCalculator price={price}/>
+          <BottomCalculator label={'Уборка квартиры от ' + price + 'руб'} url="/order/flat"/>
           <Footer logo={logo}/>
           </div>
       </div>

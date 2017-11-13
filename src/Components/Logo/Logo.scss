@@ -1,6 +1,8 @@
 .logo{
   display: flex;
   height: 100%;
+  flex-basis: 8%;
+
   .logo__inner-container{
     display: flex;
     height: 80px;
@@ -9,7 +11,6 @@
   }
 
   .logo__icon{
-    width: 48.171%;
   }
 
   .logo__image {

@@ -59,7 +59,7 @@ class Calculator extends Component {
     moment.locale('ru');
     this.state = {
       roomCount: this.props.defaultValues.roomCount || 1,
-      bathroomCount:  this.props.defaultValues.bathroomCount || 1,
+      bathroomCount: this.props.defaultValues.BathroomCount || 1,
       userInfo: {},
       address: {},
       comment: '',
@@ -72,9 +72,25 @@ class Calculator extends Component {
       isComplex: false,
       isScrollBlock: false,
       times: [
-        {value: '6.30', label: '6.30'},
-        {value: '7.30', label: '7.30'},
+        {value: '8.00', label: '8.00'},
         {value: '8.30', label: '8.30'},
+        {value: '9.00', label: '9.00'},
+        {value: '9.30', label: '9.30'},
+        {value: '10.00', label: '10.00'},
+        {value: '10.30', label: '10.30'},
+        {value: '11.00', label: '11.00'},
+        {value: '11.30', label: '11.30'},
+        {value: '12.00', label: '12.00'},
+        {value: '12.30', label: '12.30'},
+        {value: '13.00', label: '13.00'},
+        {value: '13.30', label: '13.30'},
+        {value: '14.00', label: '14.00'},
+        {value: '14.30', label: '14.30'},
+        {value: '15.00', label: '15.00'},
+        {value: '15.30', label: '15.30'},
+        {value: '16.00', label: '16.00'},
+        {value: '16.30', label: '16.30'},
+        {value: '17.00', label: '17.00'},
       ],
       options: {
         window: {
@@ -155,8 +171,7 @@ class Calculator extends Component {
   }
   
    createOrder = () => {
-    console.log(+this.state.userInfo.phoneNumber);
-     console.log(this.refs);
+    console.log(window.location);
      if(this.checkIsDataValid()) {
       const options = [];
       for (let option in this.state.options) {
@@ -193,7 +208,6 @@ class Calculator extends Component {
       //     alert(response);
       //   })
 
-       console.log(this.props);
     }
    };
 
@@ -205,7 +219,6 @@ class Calculator extends Component {
       }
 
     if(!this.state.time) {
-      console.log(this.refs.time);
       this.refs.time.handleInputFocus();
       alert("Выберите время");
       return;
@@ -726,6 +739,7 @@ class Calculator extends Component {
           {/*Заказать уборку*/}
           {/*</div>*/}
           {/*</div>*/}
+
           <div className="calculator">
             <div className="calculator__order-form">
               <div className="calculator__parameter-container">

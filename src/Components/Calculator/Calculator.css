@@ -22,7 +22,7 @@
     display: flex;
     padding: 10px 0 33px 0;
     flex-direction: column;
-    width: 87%; }
+    width: 65%; }
   .calculator__order-info-container--total {
     padding-top: 10px; }
   .calculator__label-text {
@@ -92,7 +92,7 @@
   .calculator__header {
     font-family: 'Roboto THIN';
     font-size: 1.6em;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     color: #092327;
     font-weight: bold; }
   .calculator__dataPicker {
@@ -136,8 +136,8 @@
     list-style: disc outside;
     color: #2ebaa7;
     font-size: 22px;
-    width: 86%;
-    margin: auto; }
+    width: 100%;
+    margin: 10px auto; }
   .calculator__list-element {
     font-family: Roboto Thin;
     color: #092327;
@@ -260,6 +260,12 @@
     font-weight: bold;
     width: 100%;
     font-size: 1em; }
+  .calculator__input--visible {
+    width: 100%;
+    font-size: 20px;
+    margin: 10px 0 20px;
+    box-sizing: border-box;
+    border: 1px solid #d1d1d2; }
   .calculator__input--date {
     font-family: 'Roboto Thin';
     width: 100%;
@@ -473,19 +479,22 @@ img {
   border: none;
   font-size: 0.8em;
   font-weight: 600;
-  color: black;
   cursor: pointer; }
 
+.Select-option {
+  font-size: 0.8em; }
+
 .calculator__top-header {
-  background-color: #ecf0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 48px; }
+  font-size: 48px;
+  border-bottom: 2px solid #d1d1d2; }
 
 .calculator__top-title {
   font-family: "Roboto Thin";
   font-weight: bold;
+  letter-spacing: 3px;
   color: #092327;
   padding-bottom: 20px;
   font-size: 1em; }
@@ -591,14 +600,16 @@ img {
       justify-content: flex-start; }
     .calculator .calculator__address-container {
       width: 35%;
-      margin: 0 40px 0 0; }
+      margin: 0 40px 0 0;
+      min-width: 243px !important; }
     .calculator .calculator__userInfo {
       padding: 10px 0;
       font-size: 0.9em;
       justify-content: flex-start; }
     .calculator .calculator__userInfo-container {
       width: 35%;
-      margin: 0 40px 0 0; }
+      margin: 0 40px 0 0;
+      min-width: 243px !important; }
     .calculator .calculator__textArea {
       width: 70%;
       height: 3em;
@@ -809,8 +820,8 @@ img {
 
 .calculator__parameter {
   min-width: 243px !important;
-  margin: 10px !important; }
+  margin-right: 10px; }
 
 .calculator .calculator__button {
   min-width: 243px !important;
-  margin: 10px !important; }
+  margin-right: 3em; }

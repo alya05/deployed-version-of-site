@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './terms.css';
 import {CircleLoader} from 'react-spinners';
-import logo from '../../../images/main_logo_colorfull.png';
+import logo from '../../../images/main-logo-calculator.png';
 
 import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
@@ -37,7 +37,7 @@ class Terms extends Component {
         </div>
         <div className={this.state.visible ? 'container--visible': 'container'}>
           <div className="terms__header">
-            <Header logo={logo} specClass="terms__header-background"/>
+            <Header logo={logo} specClass="header__calculator"/>
           </div>
           <div className="terms__inner-container">
             <div className="terms__title">

@@ -12,7 +12,9 @@
   .description-section .description-section__inner-container .react-tabs .react-tabs__tab--selected {
     background-color: #ecf0f0; }
   .description-section .description-section__inner-container .react-tabs .react-tabs__tab {
+    font-family: 'Roboto Light';
     border: none;
+    color: #092327;
     border-top: 1px solid #ecf0f0;
     border-radius: 0;
     margin: 0 10px;
@@ -24,6 +26,29 @@
     border: none; }
     .description-section .description-section__inner-container .react-tabs .react-tabs__tab:focus:after {
       content: none; }
+
+.description-section .description-section__button-container {
+  display: flex;
+  width: 85%;
+  justify-content: flex-end;
+  background-color: #ecf0f0; }
+
+.description-section .description-section__button-inner-container {
+  background-color: #ecf0f0;
+  width: 100%; }
+
+.description-section .description-section__button {
+  padding: 7px 40px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid #092327;
+  background: transparent;
+  align-self: flex-end;
+  font-size: 16px;
+  margin: 30px 0 20px 0;
+  font-family: 'Roboto';
+  color: #092327;
+  font-weight: bold; }
 
 .description-section .description-section__title {
   font-size: 1.2em;
@@ -38,18 +63,24 @@
 .description-section .description-section__option {
   display: flex;
   justify-content: center;
-  padding: 60px;
-  background-color: #ecf0f0; }
+  background-color: #ecf0f0;
+  padding: 50px 24px; }
+
+.description-section .description-section__option-container {
+  background-color: #ecf0f0;
+  display: flex;
+  width: 85%;
+  justify-content: center; }
 
 .description-section .description-section__main-image-container {
-  width: 40%;
+  width: 33%;
   align-self: flex-start; }
 
 .description-section .description-section__main-image-wrapper {
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding-bottom: 80%; }
+  padding-bottom: 100%; }
 
 .description-section .description-section__main-image {
   position: absolute;
@@ -58,7 +89,7 @@
   width: 100%;
   height: 100%; }
   .description-section .description-section__main-image--room {
-    background: url("../../../images/room.jpg");
+    background: url("../../../images/2.jpg");
     background-size: 100% 100%; }
   .description-section .description-section__main-image--kitchen {
     background: url("../../../images/kitchen.jpg");
@@ -69,22 +100,99 @@
 
 .description-section .description-section__item-container {
   display: flex;
-  flex-basis: 50%;
+  flex-basis: 60%;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  align-content: space-between; }
 
 .description-section .description-section__item {
   display: flex;
-  margin: 0 50px 50px 50px;
+  margin: 0 25px;
   align-items: center;
-  width: 250px; }
+  width: 40%; }
 
 .description-section .description-section__image-container {
-  min-width: 100px;
-  height: 100px;
-  background: #2ebaa7; }
+  display: flex;
+  min-width: 8vw;
+  min-height: 8vw;
+  max-width: 8vw;
+  max-height: 8vw; }
+
+.description-section .description-section__image {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%; }
 
 .description-section .description-section__text {
+  font-family: 'Roboto';
   color: #092327;
-  font-size: 18px;
-  padding: 10px; }
+  font-size: 16px;
+  padding: 10px;
+  letter-spacing: 1px; }
+
+@media screen and (max-width: 960px) {
+  .description-section .description-section__option {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .description-section .description-section__option-container {
+    background-color: #ecf0f0; }
+  .description-section .description-section__main-image-container {
+    align-self: auto;
+    width: 50%; }
+  .description-section .description-section__item-container {
+    display: flex;
+    flex-basis: 40%;
+    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .description-section .description-section__item {
+    display: flex;
+    margin: 0 25px 25px 25px;
+    align-items: center;
+    width: 40%; }
+  .description-section .description-section__image-container {
+    display: flex;
+    min-width: 10vw;
+    min-height: 10vw;
+    max-width: 10vw;
+    max-height: 10vw; } }
+
+@media screen and (max-device-width: 750px) {
+  .description-section .description-section__option {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .description-section .description-section__main-image-container {
+    width: 80%; }
+  .description-section .description-section__main-image {
+    height: 100%; }
+  .description-section .description-section__main-image-wrapper {
+    width: 64vw;
+    padding-bottom: 0;
+    height: 30vw; }
+  .description-section .description-section__item-container {
+    display: flex;
+    flex-basis: 40%;
+    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .description-section .description-section__text {
+    font-weight: 300; }
+  .description-section .description-section__image-container {
+    display: none; }
+  .description-section .description-section__item {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    width: 100%;
+    font-size: 15px; }
+  .description-section .description-section__button-container {
+    display: flex;
+    justify-content: center; }
+  .description-section .description-section__button {
+    margin: auto;
+    font-size: 14px; }
+  .description-section .react-tabs__tab {
+    min-width: 18%; } }

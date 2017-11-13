@@ -14,3 +14,6 @@ export const TRAY_PRICE = 4;
 export const DRAWER_PRICE = 5;
 export const BATHROOM_WALL_PRICE = 6;
 
+export const COTTAGE_SUPPORTIVE_PRICE = 0.8;
+export const COTTAGE_COMPLEX_PRICE = 1.2;
+

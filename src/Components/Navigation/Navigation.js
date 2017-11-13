@@ -14,6 +14,9 @@ class Navigation extends Component {
           <div className="navigation__element">
             <NavLink to={'/cottage'} activeClassName="navigation__element-name_active" className="navigation__element-name">коттедж</NavLink>
           </div>
+          <div className="navigation__element navigation__element__question ">
+            <NavLink to={'/questions'} activeClassName="navigation__element-name_active" className="navigation__element-name">вопросы</NavLink>
+          </div>
           {/*<div className="navigation__element">*/}
             {/*<a className="navigation__element-name" href="#">окна</a>*/}
           {/*</div>*/}
