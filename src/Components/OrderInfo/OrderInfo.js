@@ -39,7 +39,10 @@ class OrderInfo extends Component {
       'Комплексная';
 
     if (this.props.isCottage) {
-      return text + ' уборка коттеджа площадью ' + this.props.metersCount + ' кв. м'
+      const textCottage = text + ' уборка коттеджа площадью ' + this.props.metersCount + '<sup>2</sup>';
+      return (
+        <span>{text} уборка коттеджа площадью  {this.props.metersCount} м<sup>2</sup></span>
+      );
     }
     let rooms = '';
     let baths = '';
@@ -136,7 +139,6 @@ class OrderInfo extends Component {
             </div>
             <div className="calculator__order-info-container calculator__order-info-container--options">
               <span className="calculator__order-info-text">Дополнительно:</span>
-              <span className="calculator__order-info-text-blue"></span>
             </div>
             {this.renderOptionsList()}
             <div className="calculator__order-info-container calculator__order-info-container--price">

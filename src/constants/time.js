@@ -14,3 +14,6 @@ export const TRAY_TIME = 0.5;
 export const BATHROOM_WALL_TIME = 0.5;
 export const DRAWER_TIME = 0.5;
 
+export const COTTAGE_SUPPORTIVE_TIME = 0.3;
+export const COTTAGE_COMPLEX_TIME = 0.45;
+

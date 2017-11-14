@@ -397,6 +397,47 @@
     }
   }
 }
+@media screen and (max-device-width: 430px) {
+  .trust-section {
+    font-size: 24px;
+
+    .trust-section__inner-container {
+      padding: 10px 0 40px;
+    }
+
+    .trust-section__argument-container {
+      padding: 20px;
+      margin: auto;
+      width: 80%;
+    }
+
+    .trust-section__content-title {
+      font-size: 16px;
+      padding-top: 15px;
+    }
+
+    .trust-section__container {
+      display: flex;
+      justify-content: center;align-items: center;
+      width: 100%;
+    }
+
+    .trust-section__content {
+      opacity: 1;
+    }
+
+    .trust-section__content-text {
+      width: 90%;
+      font-size: 16px;
+    }
+
+    .trust-section__argument {
+      height: 62.2vw;
+      width: 66.2vw;
+      margin: 0;
+    }
+  }
+}
 
 
 

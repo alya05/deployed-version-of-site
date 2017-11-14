@@ -28,6 +28,7 @@ const bemModifiers = {
 
 class FAQSection extends Component {
   render() {
+
     return (
       <section className="faq-section">
         <div className="faq-section__inner-container">

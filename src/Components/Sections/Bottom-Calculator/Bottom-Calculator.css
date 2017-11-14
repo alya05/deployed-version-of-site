@@ -16,3 +16,11 @@
     border-radius: 15px;
     padding: 20px;
     margin: 100px 0; }
+
+@media screen and (max-device-width: 450px) {
+  .bottom-calculator-section .bottom-calculator-section__text {
+    background-color: #2ebaa7;
+    border-radius: 8px;
+    padding: 11px;
+    width: 70%;
+    margin: 100px 0; } }

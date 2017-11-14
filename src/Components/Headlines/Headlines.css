@@ -20,7 +20,7 @@
 
 @media screen and (max-device-width: 750px) {
   .headlines {
-    margin: 20px auto; }
+    margin: 63px auto 0 auto; }
     .headlines .headlines__main-headline {
       font-size: 17px; }
     .headlines .headlines__second-headline {

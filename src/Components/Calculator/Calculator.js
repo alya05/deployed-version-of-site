@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
@@ -52,6 +53,8 @@ import drawerActive from '../../images/drawerActive.png'
 
 import bathtub from '../../images/bathtub.png'
 import bathtubActive from '../../images/bathtubActive.png'
+
+import { browserHistory } from 'react-router';
 
 class Calculator extends Component {
   constructor(props) {
@@ -171,8 +174,7 @@ class Calculator extends Component {
   }
   
    createOrder = () => {
-    console.log(window.location);
-     if(this.checkIsDataValid()) {
+    if(this.checkIsDataValid()) {
       const options = [];
       for (let option in this.state.options) {
         if (this.state.options[option].checked) {
@@ -205,7 +207,7 @@ class Calculator extends Component {
       //   }
       // })
       //   .then(response => {
-      //     alert(response);
+      //     this.props.history.push('/flat');
       //   })
 
     }
@@ -1044,5 +1046,5 @@ class Calculator extends Component {
   }
 }
 
-export default Calculator;
+export default withRouter(Calculator);
 

@@ -4,6 +4,7 @@ import MainSection from '../../../Components/Sections/MainSection/MainSection';
 import RelaxSection from '../../../Components/Sections/RelaxSection/RelaxSection';
 import TrustSection from '../../../Components/Sections/TrustSection/TrustSection';
 import DescriptionSection from '../../../Components/Sections/DescriptionSection/DescriptionSection';
+import FeedbackSection from '../../../Components/Sections/FeedbackSection/FeedbackSection';
 import FAQSection from '../../../Components/Sections/FAQSection/FAQSection';
 import ProcessingSection from '../../../Components/Sections/ProcessingSection/ProcessingSection';
 import BottomCalculator from '../../../Components/Sections/Bottom-Calculator/Bottom-Calculator';
@@ -98,10 +99,11 @@ class Cottage extends Component {
           {renderModal}
           <RelaxSection isCottage={true}/>
           <TrustSection/>
-          <DescriptionSection openModal={this.openModal}/>
-          <FAQSection/>
+          <DescriptionSection isCottage={true} openModal={this.openModal}/>
+          <FAQSection />
           <ProcessingSection/>
-          <BottomCalculator label='Уборка коттеджа от 80р' price={price} url="/order/cottage"/>
+          <FeedbackSection/>
+          <BottomCalculator label={ <span>Уборка коттеджа от 0.8р/м<sup>2</sup></span>} price={price} url="/order/cottage"/>
           <Footer logo={logo}/>
           </div>
       </div>

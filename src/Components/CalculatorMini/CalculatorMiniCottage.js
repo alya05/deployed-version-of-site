@@ -44,10 +44,10 @@ class CalculatorMiniCottage extends Component {
               <div onClick={addMeters} className="calculator-mini__button-block-button">+</div>
             </div>
           </div>
-          <div className="calculator-mini__button-block calculator-mini__button-block_makeorder-style">
+          <div className="calculator-mini__button-block calculator-mini__button-block_makeorder-style calculator-mini__button-block_makeorder-style--cottage">
             <div className="calculator-mini__button-block-inner-container">
               <NavLink to={'/order/cottage'} className="calculator-mini__button-block-text calculator-mini__button-block-text_makeorder-style">
-              <div className="order__button">Заказать уборку от 0.8р/кв. м</div>
+              <div className="order__button">Заказать уборку от 0.8р/м<sup>2</sup></div>
               </NavLink>
             </div>
           </div>

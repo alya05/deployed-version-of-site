@@ -36,7 +36,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    margin: 20px 0; }
   .modal .modal_options-container {
     display: flex;
     flex-wrap: wrap;
@@ -108,4 +109,7 @@
     justify-content: center; }
   .modal .modal__lists-container {
     flex-direction: column;
-    justify-content: center; } }
+    justify-content: center; }
+  .modal .modal__close-button {
+    width: 25px;
+    height: 25px; } }

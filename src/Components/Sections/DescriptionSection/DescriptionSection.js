@@ -25,10 +25,26 @@ import hallDoor from '../../../images/hallDoor.png';
 import hallBoots from '../../../images/hallBoots.png';
 import hallGlass from '../../../images/hallGlass.png';
 
-
+import bathroomTable from '../../../images/bathroomTable.jpg';
+import bathroom from '../../../images/dush_i_vannuyu.jpg';
+import bathroomMirrows from '../../../images/zerkala_i_stekl.jpg';
+import bathroomPol from '../../../images/pol.jpg';
+import bathroomUnitaz from '../../../images/unitaz.jpg';
+import bathroomGarbage from '../../../images/musor.jpg';
 
 class DescriptionSection extends Component {
   render() {
+
+    const renderCottagePoint = this.props.isCottage ?
+      <div className="description-section__item">
+        <div className="description-section__image-container">
+          <img className="description-section__image" src={kitchenDrawer} alt=""/>
+        </div>
+        <div className="description-section__text">Моем лестничные пролеты в доме, протираем перила от пыли</div>
+      </div>
+      :
+      null;
+
     return (
       <section className="description-section">
         <div className="description-section__inner-container">
@@ -145,44 +161,44 @@ class DescriptionSection extends Component {
                 <div className="description-section__option-container">
                   <div className="description-section__main-image-container">
                     <div className="description-section__main-image-wrapper">
-                      <div className="description-section__main-image description-section__main-image--kitchen">
+                      <div className="description-section__main-image description-section__main-image--bathroom">
                       </div>
                     </div>
                   </div>
                   <div className="description-section__item-container">
                     <div className="description-section__item">
                       <div className="description-section__image-container">
-                        <img className="description-section__image" src={kitchenDrawer} alt=""/>
+                        <img className="description-section__image" src={bathroomTable} alt=""/>
                       </div>
                       <div className="description-section__text">Протираем все доступные горизонтальные поверхности</div>
                     </div>
                     <div className="description-section__item">
                       <div className="description-section__image-container">
-                        <img className="description-section__image" src={kitchenFridge} alt=""/>
+                        <img className="description-section__image" src={bathroom} alt=""/>
                       </div>
                       <div className="description-section__text">Моем душевую кабину и ванную</div>
                     </div>
                     <div className="description-section__item">
                       <div className="description-section__image-container">
-                        <img className="description-section__image" src={kitchenCook} alt=""/>
+                        <img className="description-section__image" src={bathroomMirrows} alt=""/>
                       </div>
                       <div className="description-section__text">Чистим зеркала и зеркальные поверхности</div>
                     </div>
                     <div className="description-section__item">
                       <div className="description-section__image-container">
-                        <img className="description-section__image" src={kitchenSink} alt=""/>
+                        <img className="description-section__image" src={bathroomPol} alt=""/>
                       </div>
                       <div className="description-section__text">Моем пол и протираем плинтусы и пылесосим коврики</div>
                     </div>
                     <div className="description-section__item">
                       <div className="description-section__image-container">
-                        <img className="description-section__image" src={kitchenFloor} alt=""/>
+                        <img className="description-section__image" src={bathroomUnitaz} alt=""/>
                       </div>
-                      <div className="description-section__text">Моем пол и протираем плинтусы</div>
+                      <div className="description-section__text">Моем и дезинфицируем унитаз</div>
                     </div>
                     <div className="description-section__item">
                       <div className="description-section__image-container">
-                        <img className="description-section__image" src={kitchenGarbage} alt=""/>
+                        <img className="description-section__image" src={bathroomGarbage} alt=""/>
                       </div>
                       <div className="description-section__text">Выносим мусор</div>
                     </div>
@@ -224,12 +240,7 @@ class DescriptionSection extends Component {
                       </div>
                       <div className="description-section__text">Моем пол и протираем плинтусы</div>
                     </div>
-                    <div className="description-section__item">
-                      <div className="description-section__image-container">
-                        <img className="description-section__image" alt=""/>
-                      </div>
-                      <div className="description-section__text"></div>
-                    </div>
+                    {renderCottagePoint}
                     <div className="description-section__item">
                       <div className="description-section__image-container">
                         <img className="description-section__image" alt=""/>

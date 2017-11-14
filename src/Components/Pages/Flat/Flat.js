@@ -3,6 +3,7 @@ import './Flat.css';
 import MainSection from '../../../Components/Sections/MainSection/MainSection';
 import RelaxSection from '../../../Components/Sections/RelaxSection/RelaxSection';
 import TrustSection from '../../../Components/Sections/TrustSection/TrustSection';
+import FeedbackSection from '../../../Components/Sections/FeedbackSection/FeedbackSection';
 import DescriptionSection from '../../../Components/Sections/DescriptionSection/DescriptionSection';
 import FAQSection from '../../../Components/Sections/FAQSection/FAQSection';
 import ProcessingSection from '../../../Components/Sections/ProcessingSection/ProcessingSection';
@@ -129,7 +130,8 @@ class Flat extends Component {
           <DescriptionSection openModal={this.openModal}/>
           <FAQSection/>
           <ProcessingSection/>
-          <BottomCalculator label={'Уборка квартиры от ' + price + 'руб'} url="/order/flat"/>
+          <FeedbackSection/>
+          <BottomCalculator label={'Уборка квартиры от ' + price + 'р.'} url="/order/flat"/>
           <Footer logo={logo}/>
           </div>
       </div>

@@ -12,6 +12,7 @@
 
   &--cottage {
     width: 35%;
+    left: 31.9%;
   }
 
   .calculator-mini__inner-container{
@@ -33,6 +34,10 @@
   .calculator-mini__button-block_makeorder-style{
     width: 37.84%;
     color: #ffffff;
+
+    &--cottage {
+      width: 49.84%;
+    }
   }
 
   .calculator-mini__button-block-inner-container{
@@ -93,7 +98,7 @@
     }
 
     .calculator-mini__button-block{
-      width: 60%;
+      width: 73%;
       height: auto;
     }
 
@@ -105,7 +110,7 @@
       height: auto;
       width: 15.36%;
       background-color: #ffffff;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto Thin', sans-serif;
       font-weight: 100;
       font-size: inherit;
       display: -ms-flexbox;
@@ -116,7 +121,8 @@
       -ms-flex-pack: center;
       justify-content: center;
       cursor: pointer;
-    }
+       color: #092327;
+     }
 
     .order__button {
       padding: 5px 10px;
@@ -125,6 +131,7 @@
 
      .calculator-mini__button-block-text {
       padding: 5px 0;
+       font-weight: 300;
     }
   }
 }

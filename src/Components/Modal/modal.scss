@@ -155,5 +155,10 @@
       flex-direction: column;
       justify-content: center;
     }
+
+    .modal__close-button {
+      width: 25px;
+      height: 25px;
+    }
   }
 }

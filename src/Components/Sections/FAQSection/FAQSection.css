@@ -33,6 +33,10 @@
     padding: 20px 0; }
   .faq-section .faq-section__button {
     margin: 20px auto; }
+  .faq-section .accordion-content {
+    padding: 0; }
+  .faq-section .accordion p {
+    padding: 0; }
   .accordion .accordion-title {
     font-size: 14px;
     font-family: 'Roboto'; }
@@ -110,9 +114,6 @@
   clear: both;
   content: '';
   display: block; }
-
-.accordion-animator--checked {
-  max-height: 100px; }
 
 .accordion-content {
   -webkit-box-sizing: border-box;

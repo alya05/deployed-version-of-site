@@ -53,7 +53,7 @@ class CalculatorMini extends Component {
           <div className="calculator-mini__button-block calculator-mini__button-block_makeorder-style">
             <div className="calculator-mini__button-block-inner-container">
               <NavLink to={'/order/flat'} className="calculator-mini__button-block-text calculator-mini__button-block-text_makeorder-style">
-              <div className="order__button">Заказать уборку от {price}р</div>
+              <div className="order__button">Заказать уборку от {price}р.</div>
               </NavLink>
             </div>
           </div>

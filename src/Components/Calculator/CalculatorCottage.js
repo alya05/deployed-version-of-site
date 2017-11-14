@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
@@ -214,7 +215,7 @@ class CalculatorCottage extends Component {
       //   }
       // })
       //   .then(response => {
-      //     alert(response);
+      //     this.props.history.push('/cottage');
       //   })
 
     }
@@ -658,9 +659,9 @@ class CalculatorCottage extends Component {
   };
 
   countTime = () => {
-    const {window, balcony, cutlery, fridge, oven, microwave, kitchen, iron, chandelier, tray, drawer, bathtub} = this.state.options;
+    const {window, balcony, cutlery, fridge, oven, microwave, kitchen, iron, chandelier, tray} = this.state.options;
     let time = 0;
-    time += TIMES.BASE_TIME
+    time +=
       + window.count*TIMES.WINDOW_TIME
       + balcony.count*TIMES.BALCONY_TIME
       + cutlery.count*TIMES.DISHES_TIME
@@ -670,7 +671,13 @@ class CalculatorCottage extends Component {
       + kitchen.count*TIMES.KITCHEN_TIME
       + iron.count*TIMES.IRONING_TIME
       + chandelier.count*TIMES.CHANDELIER_TIME
-      + tray.count*TIMES.TRAY_TIME
+      + tray.count*TIMES.TRAY_TIME;
+    const meters = this.state.metersCount / 10;
+    if (this.state.isSupportive) {
+      time+= meters* TIMES.COTTAGE_SUPPORTIVE_TIME;
+    } else {
+      time+=this.state.metersCount / 10 * TIMES.COTTAGE_COMPLEX_TIME;
+    }
     return time + ' ч.'
   };
 
@@ -723,7 +730,7 @@ class CalculatorCottage extends Component {
                     <div onClick={this.removeMeter} className="calculator__parameter-text">
                       <span>-</span>
                     </div>
-                    <div className="calculator__parameter-text--center">{this.state.metersCount + ' кв. м'}</div>
+                    <div className="calculator__parameter-text--center">{this.state.metersCount} м<sup>2</sup></div>
                     <div onClick={this.addMeter} className="calculator__parameter-text">
                       <span>+</span>
                     </div>
@@ -941,15 +948,12 @@ class CalculatorCottage extends Component {
                             autosize={false}
                             onChange={this.cityChange}/>
                     <div className="calculator__input-container">
-                      <input type="text" maxLength="4" ref='home' onChange={this.changeAddress} name="home" placeholder="Дом" className="calculator__input--short"/>
-                      <input type="text" maxLength="3" onChange={this.changeAddress} name="housing" placeholder="Корпус" className="calculator__input--short"/>
+                      <input type="text" maxLength="4" ref='home' onChange={this.changeAddress} name="home" placeholder="Дом" className="calculator__input--long"/>
                     </div>
                   </div>
-                  <div className="calculator__address-container">
-                    <input type="text" ref="street" maxLength="15" onChange={this.changeAddress} name="street" placeholder="Улица" className="calculator__input--long"/>
+                  <div className="calculator__address-container calculator__address-container--cottage">
                     <div className="calculator__input-container">
-                      <input type="tel" ref="flat" maxLength="4" onChange={this.changeAddress} name="flat" placeholder="Квартира" className="calculator__input--short"/>
-                      <input type="tel" ref="entrance" maxLength="1" onChange={this.changeAddress} name="entrance" placeholder="Подъезд" className="calculator__input--short"/>
+                      <input type="text" ref="street" maxLength="15" onChange={this.changeAddress} name="street" placeholder="Улица" className="calculator__input--long"/>
                     </div>
                   </div>
                 </div>
@@ -1018,5 +1022,5 @@ class CalculatorCottage extends Component {
   }
 }
 
-export default CalculatorCottage;
+export default withRouter(CalculatorCottage);
 
